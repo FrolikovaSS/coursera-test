@@ -26,7 +26,7 @@ function playColor() {
             return true;
         }
         if (colors.indexOf(color_answer) == -1) {
-            alert(" I don't recognize!");
+            alert(" Sorry, I don't recognize!");
             return false;
         }
         if (color_answer > target_color) {
