@@ -37,7 +37,7 @@ function playColor() {
             return false;
         }
         document.getElementsByTagName("body")[0].style.background = target_color;
-        setTimeout(function(){alert("Yes! You do it! My color is " + target_color.toUpperCase() + "\n\n It took you " + times + " guesses!")}, 100);
+        setTimeout(function(){alert("Yes! You do it! My color is " + target_color.toUpperCase() + "\n\n It took you " + times + " guesses!")}, 0);
 
         return true;
     }
