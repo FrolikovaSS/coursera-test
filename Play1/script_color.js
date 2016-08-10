@@ -12,7 +12,7 @@ function playColor() {
     var target_color = colors[target_number];
     alert(target_color);
     while (!finished) {
-        color_answer = prompt("I'm thinking of one of these colors:\n\n" +
+        var color_answer = prompt("I'm thinking of one of these colors:\n\n" +
             "aqua, black, blue, cyan, gold, green, gray, orange, pink, purple, red, silver, white, yellow\n\n" +
             "What color am I thinking of?");
         times++;
@@ -22,7 +22,7 @@ function playColor() {
 
     function check_guess() {
         if (color_answer == null) {
-            alert("Good bye!")
+            alert("Good bye!");
             return true;
         }
         if (colors.indexOf(color_answer) == -1) {
@@ -37,7 +37,7 @@ function playColor() {
             alert("Your color is lower!");
             return false;
         }
-        var myBody = document.getElementsByTagName("body")[0].style.background = target_color;
+        document.getElementsByTagName("body")[0].style.background = target_color;
         alert("Yes! You do it! My color is " + target_color.toUpperCase() + "\n\n It took you " + times + " guesses!");
         return true;
     }
