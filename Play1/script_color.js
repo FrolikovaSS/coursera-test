@@ -3,14 +3,17 @@
  */
 var colors = [];
 colors = ["aqua", "black", "blue", "cyan", "gold", "green", "gray", "orange", "pink", "purple", "red", "silver", "white", "yellow"];
-finished = false;
+var finished = false;
 var times = 0;
 
 function playColor() {
+
     var random_number = Math.floor(Math.random() * colors.length);
     var target_color = colors[random_number];
     alert(target_color);
+
     while (!finished) {
+
         var color_answer = prompt("I'm thinking of one of these colors:\n\n" +
             "aqua, black, blue, cyan, gold, green, gray, orange, pink, purple, red, silver, white, yellow\n\n" +
             "What color am I thinking of?");
@@ -37,7 +40,11 @@ function playColor() {
             return false;
         }
         document.getElementsByTagName("body")[0].style.background = target_color;
-        setTimeout(function(){alert("Yes! You do it! My color is " + target_color.toUpperCase() + "\n\n It took you " + times + " guesses!")}, 0);
+        setTimeout(function(){
+            alert("Yes! You do it! My color is " + target_color.toUpperCase() +
+            "\n\n It took you " + times + " guesses!");
+            document.getElementsByTagName("body")[0].style.background = "white";
+        }, 0);
 
         return true;
     }
