@@ -8,8 +8,7 @@ var times = 0;
 
 function playColor() {
     var random_number = Math.floor(Math.random() * colors.length);
-    var target_number = random_number + 1;
-    var target_color = colors[target_number];
+    var target_color = colors[random_number];
     alert(target_color);
     while (!finished) {
         var color_answer = prompt("I'm thinking of one of these colors:\n\n" +
@@ -38,7 +37,8 @@ function playColor() {
             return false;
         }
         document.getElementsByTagName("body")[0].style.background = target_color;
-        alert("Yes! You do it! My color is " + target_color.toUpperCase() + "\n\n It took you " + times + " guesses!");
+        setTimeout(function(){alert("Yes! You do it! My color is " + target_color.toUpperCase() + "\n\n It took you " + times + " guesses!")}, 100);
+
         return true;
     }
 
