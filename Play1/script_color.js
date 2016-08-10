@@ -19,7 +19,6 @@ function playColor() {
             "What color am I thinking of?");
         times++;
         finished = check_guess();
-
     }
 
     function check_guess() {
@@ -48,5 +47,4 @@ function playColor() {
 
         return true;
     }
-
 }
