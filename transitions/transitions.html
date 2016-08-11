@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>transition-timing-function</title>
+    <style>
+        .progress {
+            background: #333; /* Фон */
+            border: 2px solid #333; /* Рамка */
+            height: 20px; /* Высота */
+            position: relative; /* Относительное позиционирование */
+        }
+        .progress:hover::before{
+            width: 100%;
+        }
+        .progress::before{
+            transition-timing-function: linear;
+            transition-duration: 3s;
+            content: '';
+            position: absolute; /* Абсолютное позиционирование */
+            height: 100%; width: 0%;
+            background: #cc2299; /* Фон */
+        }
+        .button {
+            width: 200px;
+            height: 200px;
+            border-radius: 0px;
+            position: relative;
+        }
+        .button:active::before{
+            height: 50%;
+            width: 50%;
+            border-radius: 50px;
+            background-color: #88cc00;
+        }
+        .button::before{
+            transition-duration: 1s;
+            transition-timing-function: linear;
+            background-color: #ff8c00;
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="progress"></div>
+<div class="button"></div>
+</body>
+</html>
