@@ -10,30 +10,37 @@
             height: 20px; /* Высота */
             position: relative; /* Относительное позиционирование */
         }
-        .progress:hover::before{
+
+        .progress:hover::before {
             width: 100%;
         }
-        .progress::before{
+
+        .progress::before {
             transition-timing-function: linear;
             transition-duration: 3s;
             content: '';
             position: absolute; /* Абсолютное позиционирование */
-            height: 100%; width: 0%;
+            height: 100%;
+            width: 0%;
             background: #cc2299; /* Фон */
         }
+
         .button {
             width: 200px;
             height: 200px;
             border-radius: 0px;
             position: relative;
+
         }
-        .button:active::before{
+
+        .button:active::before {
             height: 50%;
             width: 50%;
             border-radius: 50px;
             background-color: #88cc00;
         }
-        .button::before{
+
+        .button::before {
             transition-duration: 1s;
             transition-timing-function: linear;
             background-color: #ff8c00;
@@ -41,13 +48,30 @@
             width: 100%;
             height: 100%;
             position: absolute;
-
         }
+
+        .rotate {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: #00ffff;
+            transition-duration: 1s;
+        }
+
+        .rotate:hover {
+            transform: rotate(360deg);
+            width: 150px;
+            height: 150px;
+            background-color: #0055ff;
+            border-radius: 0px;
+        }
+
 
     </style>
 </head>
 <body>
 <div class="progress"></div>
 <div class="button"></div>
+<div class="rotate"></div>
 </body>
 </html>
