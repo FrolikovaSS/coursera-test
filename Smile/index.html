@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="script_smile.js"> </script>
+    <title>Smile</title>
+    <style>
+        #rightSide {
+            border-left: 1px solid #000;
+            height: 500px;
+            width: 500px;
+            position:absolute;
+            display: inline-block;
+
+        }
+        #leftSide {
+            height: 500px;
+            width:500px;
+            display: inline-block;
+            position:relative;
+
+        }
+        img {
+            position:absolute;
+            display: block;
+        }
+    </style>
+</head>
+<body id="theBody" onload="generateFaces()">
+<h1>Найди лишний смайлик</h1>
+<p>Кликни на лишнем смайлике слева.</p>
+<div id="leftSide"></div>
+
+<div id="rightSide"></div>
+</body>
+</html>
